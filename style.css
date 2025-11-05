@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap');
+
+@layer customproperties{
+    :root{
+
+        --clr-green: #44FFA1;
+        --clr-purple-900: #24053E;
+        --clr-purple-500: #584D62;
+        --clr-purple-100: #FCF8FF;
+        --clr-white: #FFF;
+
+
+        --ff-heading: "Fraunces", sans-serif;
+        --ff-body: "Manrope", sans-serif;
+
+
+        --fs-xlrg: 5rem;
+        --fs-lrg: 3.5rem;
+        --fs-md: 2rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+@layer reset{
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*, * > *{
+    padding: 0;
+    margin: 0;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+}
+
+@layer layout{
+    body{
+        display: grid;
+        place-content: center;
+        width: 100vw;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-purple-900);
+        width: 100vw;
+        padding: 56px 80px 296px 56px;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-wrapper{
+        max-width: 1100px;
+        border: 2px solid black;    
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+        
+    }
+
+    .hero-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+        justify-content: flex-start;
+        width: 1120px;
+        position: relative;
+    }
+}
+
+@layer base-styles{
+    header{
+        background-color: var(--clr-purple-900);
+        
+    }
+
+    main{
+        background-color: var(--clr-purple-100);
+        color: var(--clr-purple-900);
+    }
+
+    .body{
+        font-family: var(--ff-body);
+    }
+
+    .hero-heading{
+        font-family: var(--ff-heading);
+        font-size: var(--fs-xlrg);
+        color: var(--clr-white);
+        font-weight: 600;
+        line-height: 100%;
+        margin-top: 3.5rem;
+
+        span{
+            text-decoration: underline var(--clr-green);
+            text-underline-offset: 0.5rem;
+            line-height: 100%;
+            letter-spacing: 0px;
+        }
+    }
+    .btn-link{
+        padding: 12px 32px;
+        background-color: #44FFA1;
+    }
+
+    .founder-card{
+        background-color: var(--clr-purple-900);
+        color: var();
+    }
+
+    .phone-img{
+        max-width: 45.5rem;
+        position: absolute;
+        top: 425px;
+
+    }
+
+    .content{
+        margin-top: 10rem;
+        display: grid;
+        place-content: center;
+        display: flex;
+padding: var(--spacing-1100, 5.5rem) var(--spacing-1000, 5rem) var(--spacing-1800, 9rem) var(--spacing-1000, 5rem);
+
+    }
+    .three-column-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1120px;
+        gap: 2rem;
+
+    }
+    .content-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3.5rem;
+        column-rule: var(--clr-purple-900);
+        font-size: var(--fs-body);
+        font-family: var(--ff-body);
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+    }
+
+    .card-number{
+        border: 2px solid black;
+        border-radius: 99%;
+        height: 60px;
+        width: 60px;
+        font-size: var(--fs-md);
+        text-align: center;
+        font-family: var(--ff-heading);
+        font-size: var(--fs-md);
+        color: var(--clr-purple-900);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+        
+}
+
+.content-card p{
+    font-weight: 400;
+    line-height: 180%;
+    text-align: center;
+    max-width: 352px;
+}
+
+.content-heading{
+            font-family: var(--ff-heading);
+            font-size: var(--fs-md);
+            font-weight: 600;
+            line-height: 120%;
+        }
