@@ -293,7 +293,10 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-@media (max-width: 550px) {
+
+}
+
+@media (max-width: 375px) {
     body{
         color: pink;
     }
