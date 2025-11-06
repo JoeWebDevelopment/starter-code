@@ -83,245 +83,85 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer layout{
-    body{
-        display: grid;
-        place-content: center;
-        width: 100vw;
-    }
-    
-    .nav-links{
-        border: 2px solid black;
-        max-width: 1200px;
-        flex-shrink: 1;
-    }
-    .header-wrapper{
-        border: 2px solid black;
-    }
-
-    header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--clr-purple-900);
-        width: 100vw;
-        padding-top: 56px;
-        z-index: 1;
-    }
-
-    .nav-links{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .header-wrapper{
-        max-width: 1200px;   
-    }
-
-    .hero{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        
-    }
-
-    .hero-wrapper{
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        align-items: center;
-        justify-content: flex-start;
-        width: 1200px;
-        padding-bottom: 296px;
-    }
 }
 
 @layer base-styles{
     header{
-        
-    }
-
-    main{
-        background-color: var(--clr-purple-100);
-        color: var(--clr-purple-900);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .body{
-        font-family: var(--ff-body);
-    }
-
-    .hero-heading{
-        font-family: var(--ff-heading);
-        font-size: var(--fs-xlrg);
-        color: var(--clr-white);
-        font-weight: 600;
-        line-height: 100%;
-        padding-top: 56px;
-
-        span{
-            text-decoration: underline var(--clr-green);
-            text-underline-offset: 0.5rem;
-            line-height: 100%;
-            letter-spacing: 0px;
-        }
-    }
-    .btn-link{
-        padding: 12px 32px;
-        background-color: #44FFA1;
-    }
-
-    .founder-card{
         background-color: var(--clr-purple-900);
-        color: var();
-    }
-
-    .phone-img{
-        max-width: 45.5rem;
-        z-index: 2;
-        transform: translateY(-14rem);
-        padding: 0;
-        margin: 0;
 
     }
 
-    .content{
-padding: 0px var(--spacing-1000, 5rem) var(--spacing-1800, 9rem) var(--spacing-1000, 5rem);
-
-    }
-    .three-column-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1120px;
-        gap: 2rem;
-
-    }
-    .content-card{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 3.5rem;
-        column-rule: var(--clr-purple-900);
-        font-size: var(--fs-body);
-        font-family: var(--ff-body);
+    .header-wrapper{
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
-    .card-content{
-        display: flex;
-        flex-direction: column;
-        gap: 1.75rem;
-    }
+    
+   nav{
+     font-family: var(--ff-body);
+     font-size: var(--fs-body);
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     border: 2px solid black;
+     padding-inline: 1rem;
+     padding-block-start: 3.5rem;
+   }
+   .nav-link{
+    color: var(--clr-white);
+    text-decoration: underline var(--clr-green) 3px;
+    text-underline-offset: .5rem;
+   }
 
-    .card-number{
-        border: 2px solid black;
-        border-radius: 99%;
-        height: 60px;
-        width: 60px;
-        font-size: var(--fs-md);
-        text-align: center;
-        font-family: var(--ff-heading);
-        font-size: var(--fs-md);
-        color: var(--clr-purple-900);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-        
-}
-
-.content-card p{
-    font-weight: 400;
-    line-height: 180%;
-    text-align: center;
-    max-width: 352px;
-}
-
-.content-heading{
-            font-family: var(--ff-heading);
-            font-size: var(--fs-md);
-            font-weight: 600;
-            line-height: 120%;
-        }
-
-
-.founder {
-
-    padding-top: 112px;
-    padding-left: 80px;
-    padding-right: 80px;
-    background-color: white;
+   .hero-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-bottom: 5rem;
-
-
-}
-
-   .cta-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    z-index: 1;
+    gap: 2.5rem;
+    padding: 3.5rem 5rem 18rem 5rem;
     
    }
-   
-   .founder-pfp{
-    max-width: 477px;
-    z-index: 2;
-    align-self: flex-start;
-   }
 
-   .founder-card{
-    z-index: 3;
-    color: var(--clr-white);
-    max-width: 730px;
-    max-height: 579px;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-    left: 750px;
-    align-self: flex-end;
-    transform: translateX(-12%)
-    translateY(3.5rem);
-   }
-
-   .footer{
-    background-color: var(--clr-white);
+   .hero{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 2.5rem;
-   }
-
-   .social-links{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    align-items: center;
-    justify-content: center;
     gap: .5rem;
+    position: relative;
    }
 
-   .btn-link{
-    text-decoration: none;
-    color: var(--clr-purple-900);
-    font-family: var(--ff-body);
+   .hero-heading{
+    font-family: var(--ff-heading);
+    font-size: var(--fs-xlrg);
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
     font-weight: 600;
+    color: var(--clr-white);
+   }
+
+   .underlined{
+    text-decoration: underline var(--clr-green) 3px;
+    text-underline-offset: .5rem;
+    text-decoration-skip: none;
 
    }
+}
+
+.btn-link{
+    padding: 0.75rem 2rem;
+    background-color: var(--clr-green);
+    color: var(--clr-purple-900);
+    text-decoration: none;
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+}
+
+.phone-img{
+    max-width: 44.6875rem;
+    position: absolute;
+    top: 22.5rem;
+}
