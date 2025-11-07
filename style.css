@@ -82,8 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 }
 
-@layer layout{
-}
+
 
 @layer base-styles{
     header{
@@ -105,7 +104,6 @@ h1, h2, h3, h4, h5, h6 {
      justify-content: space-between;
      align-items: center;
      width: 100%;
-     border: 2px solid black;
      padding-inline: 1rem;
      padding-block-start: 3.5rem;
    }
@@ -172,7 +170,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid pink;
 }
 
 .three-column-container{
@@ -181,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
     gap: 2rem;
     max-width: 1120px;
-    border: 2px solid black;
 }
 
 .card{
@@ -189,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
-    border: 2px solid orange;
+
 }
 
 .card-number{
@@ -230,6 +226,64 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: nowrap;
 }
 
+.founder{
+    background-color: white;
+    padding: 80px 112px 0px 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 168px;
+}
+
+.founder-img{
+    max-width: 477px;
+    z-index: 1;
+    align-self: flex-start;
+    transform: translateY(-5rem);
+}
+
+.founder-card{
+    padding: 64px;
+    background-color: #24053E;
+    z-index: 2;
+    max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    color: var(--clr-purple-100);
+    font-family: var(--ff-body);
+    font-size: var(--ff-body);
+    align-self: flex-end;
+    transform: translateX(-5rem);
+
+
+
+   
+}
+
+.founder-card .btn-link{
+        padding: 12px 32px;
+    
+}
+
+.founder-heading{
+    font-family: var(--ff-heading);
+    font-size: var(--fs-md);
+    font-weight: 600;
+}
+
+
+
 @media (max-width:975px){
     .three-column-container{
         display: flex;
@@ -268,6 +322,28 @@ h1, h2, h3, h4, h5, h6 {
     padding: 9rem 2.75rem 2.75rem 2.75rem;
 }
 
+    .founder-card{
+        padding: 65px;
+        transform: translateX(-6rem);
+        max-height: 390px;
+        width: 504px;
+        
+
+    }
+    .founder-heading{
+        text-wrap: nowrap;
+    }
+
+    .founder-card-text{
+        text-align: left;
+    }
+
+    .founder-img{
+        max-width: 280px;
+        transform: translateY(-10rem);
+    }
+}
+
 @media (max-width: 700px){
     .card{
         display: flex;
@@ -287,23 +363,111 @@ h1, h2, h3, h4, h5, h6 {
     }
  
     .phone-img{
-        max-width: 40rem;
-        transform: translateY(8rem);
+        max-width: 35rem;
+        padding: 1.5rem;
+        transform: translateY(1rem);
     }
 
-}
+    .hero-container{
+        padding: 56px 44px 144px 44px;
+    }
 
 
+    .content{
+    padding: 12rem 1rem 1rem 1rem;
+
+   
+
 }
+
+     .founder-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .founder-card{
+        transform: translateY(0px) translateX(0px);
+        max-width: 335px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .founder-heading{
+        text-align: center;
+    }
+
+    .founder-card-text{
+        text-align: center;
+    }
+
+    .founder-img{
+        transform: translateY(2.5rem) translateX(1.5rem);
+    }
+
+     .founder{
+        padding-inline: 2.5rem;
+    }
+} 
+    
+
+
 
 @media (max-width: 375px) {
-    body{
-        color: pink;
+    header{
     }
 
     .phone-img{
         max-width: 32rem;
-        padding: 0rem;
-        transform: translateY(14rem);
+        padding: 1.5rem;
+        transform: translateY(1.75rem);
     }
+    .hero-container{
+        padding: 56px 10px 144px 10px;
+        max-width: 335px;
+    }
+
+    .hero-heading{
+        text-wrap: nowrap;
+    }
+
+    .founder-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .founder-card{
+        padding: 0px;
+    }
+
+    .founder{
+        padding: 0px;
+    }
+} 
+
+
+.footer-section{
+    padding: 112px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.social-links-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
 }
