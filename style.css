@@ -471,3 +471,20 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-evenly;
 
 }
+
+.btn-link:hover, .btn-link:active{
+    background-color: var(--clr-purple-900);
+    color: #44FFA1;
+    border: 1px solid var(--clr-green);
+    cursor: pointer;
+}
+
+.social-link:hover{
+    cursor: pointer;
+}
+
+.nav-link:hover, .nav-link:active{
+    cursor: pointer;
+    color: var(--clr-green);
+
+}
